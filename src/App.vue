@@ -1,31 +1,34 @@
 <script >
-export default {
-  data(){
-    return{
-      contador:0
+   export default {
+  data() {
+    return {
+      contador: 0
     }
   },
   methods: {
-    encrementadorContador(){
+    incrementarContador() {
       this.contador++
     },
     decrementarContador() {
       this.contador--
-    },
-    
+    }
+  },
+  mounted() {
+    console.log(`O valor inicial do contador é ${this.contador}.`)
   }
 }
 
 </script>
 
 <template>
-    <button @click="incrementarContador">Incrementar</button>
-    <button @click="decrementarContador">Decrementar</button>
-    <p>Valor do contador é: {{ contador }}</p>
+  <button @click="incrementarContador">Incrementar</button>
+  <button @click="decrementarContador">Decrementar</button>
+  <p>Valor do contador é: {{ contador }}</p>
 </template>
 
-<style scoped >
-  button {
-    font-weight: bold;
-  }
+<style scoped>
+button {
+  font-weight: bold;
+}
 </style>
+
