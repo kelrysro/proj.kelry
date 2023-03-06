@@ -2,11 +2,11 @@
    import { ref } from 'vue' 
    const contador = ref(10)
 
-   function incrementar(){
+   function incrementarContador (){
     contador.value++
    }
 
-   function decrementar(){
+   function decrementarContador(){
     if(contador.value > 0 ){
       contador.value--
     }
